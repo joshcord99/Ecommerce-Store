@@ -1,11 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 1 Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Vintage Shop Undefined</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#popular">Hot Item</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <body data-bs-theme="dark">
+    <div class="card-group" id="features">
+        <div class="card">
+          <img src="https://picsum.photos/id/133/367/267" class="card-img-top" alt="vintage cars">
+          <div class="card-body">
+            <h5 class="card-title">Vintage Cars</h5>
+            <p class="card-text">Vintage Vehicles from the late 19xx, who cares? This automaker is no longer in business, good luck finding spare parts! They are Vintage though! <strong>Price: $127,500.00 USD</strong></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/146/367/267" class="card-img-top" alt="vintage cars">
+            <div class="card-body">
+              <h5 class="card-title">Vintage Ticycle</h5>
+              <p class="card-text">Vintage 1900s POS Tricycle! Taken straight from the original owner, like stealing candy from a baby! Get it now before it's repo'd! <strong>Price: $7,500.00 USD</strong></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        <div class="card">
+          <img src="https://picsum.photos/id/250/367/267" class="card-img-top" alt="camera">
+          <div class="card-body">
+            <h5 class="card-title">Vintage Camera</h5>
+            <p class="card-text">1658 Vintage Camera! Recently found in an anonymous seller's uncle's attic! Does not come with original box, there is no discount for open-box items. Good luck trying to find film reels to put into the back of this old thing! Art is priceless! <strong>Price: $52,885.00 USD</strong></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    <div class="card text-bg-dark" id="popular">
+        <img src="https://picsum.photos/id/193/367/267" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Popular Listing of the Day!</h5>
+          <p class="card-text">After a long day of constant nagging from NPCs of this world, come home to this Luxury Estate! Seized recently from a unbeknownst druglord wannabe...this luxurious 1BD/99BA(That's right! 99 full bathrooms!) getaway can be your forever away! <strong>Price: An Arm, Leg, Left-Eye, Middle toe on the Right Foot!</strong></p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        </div>
+        <div class="card mb-3" style="max-width: 968px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://picsum.photos/id/252/367/267" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Vintage Razor Shaver...</h5>
+                  <p class="card-text">This is 'believed' to be a Vintage Razor Shaver belonging to Ghengis Khan himself! Barely used, as seen in history images, this beauty is top notch! once assembled it might not resemble a razor shaver...but by then that will be your concern and not ours! <strong>Price: $273,785.00 USD</strong></p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="pricing">
+        <h2 style="text-align: center; padding-top: 2%;">Pricing Disclaimer</h2>
+        <p style="text-align: center; padding: 2%;" >All prices are subject to change. Changes may reflect a 10% 'Can't believe I got this sucker so easily' Fee due at checkout. Once items are purchased, they are officially the new buyer's reponsibility. All items sold on this site have not been, nor will be declared from the seller's standpoint. You the buyer are responsible for your own Due Diligence Process. None of the items sold via Vintage Shop Undefined come with warranty. Happy Purchasing! </p>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
