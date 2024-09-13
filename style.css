@@ -1,0 +1,20 @@
+.btn1 {
+    background-color: green !important; /* Important to override default styles */
+    border-color: green !important;     /* Optional: change border color */
+    border-radius: 6px;
+}
+  .btn2 {
+    background-color: green !important; /* Important to override default styles */
+    border-color: green !important;     /* Optional: change border color */
+    border-radius: 6px;
+}
+
+.btn3 {
+    background-color: grey !important; /* Important to override default styles */
+    border-color: grey !important;     /* Optional: change border color */
+    border-radius: 6px;
+
+}
+.boxes{
+    display: flex;
+}
