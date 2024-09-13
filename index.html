@@ -8,79 +8,76 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body data-bs-theme="light">
-      <header>
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Seller Account Name</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#popular">Hot Item</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Cart
-                    </button>
-                  </li>
-                </ul>
-              </div>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex align-items-center">
+
+          
+          <!-- Navbar Brand and Search Bar in the Same Container -->
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#">UCI Bootcamp E-Commerce </a>
+            <form class="d-flex ms-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <!-- Filtered Search Dropdown -->
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">All Categories</a></li>
+              <li><a class="dropdown-item" href="#">Electronics</a></li>
+              <li><a class="dropdown-item" href="#">Clothing</a></li>
+              <li><a class="dropdown-item" href="#">Toys</a></li>
+              <li><a class="dropdown-item" href="#">Books</a></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-primary btn-sm ms-2">Search</button>
+        </form>
+      </div>
+    
+          <!-- Cart Button with ms-auto to push it to the right -->
+          <div class="d-flex ms-auto">
+            <button class='btn1 btn btn-secondary' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              🛒 Cart
+            </button>
+          </div>
+    
+          <!-- Dropdown and Offcanvas Toggle -->
+          <button class="navbar-toggler ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">User</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </nav> -->
-          <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">User Profile</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Account</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Messages
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">New Messages</a></li>
+                    <li><a class="dropdown-item" href="#">Deleted Messages</a></li>
                   </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
-          </nav>
-        </header>
-        
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    
       <div class="container text-center mt-3 mb-3" >
         <div class="col">
         <div class="row">
@@ -194,7 +191,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                ...
+                <ol>
+                  <li>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error molestiae natus assumenda atque officia praesentium iure, omnis voluptates doloribus distinctio repudiandae nobis necessitatibus qui. Beatae doloribus fuga obcaecati dolore perferendis.
+                  </li>
+                  <li>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor commodi nostrum, incidunt tempore repellendus esse illo eos blanditiis ratione, totam facere quas rerum voluptate ducimus amet inventore minus obcaecati.
+                </ol>
                 </div>
                 <div class="modal-footer">
                 <button class='btn3' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
@@ -206,13 +209,7 @@
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-  
+    <section class="d-flex justify-content-center justify-content-lg-between">
       <!-- Right -->
       <div>
         <a href="" class="me-4 text-reset">
@@ -250,8 +247,7 @@
               <i class="fas fa-gem me-3"></i>Company name
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+            2024 UCI Bootcamp E-Commerce LLC
             </p>
           </div>
           <!-- Grid column -->
@@ -259,7 +255,8 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
+            
+            <!--<h6 class="text-uppercase fw-bold mb-4">
               Products
             </h6>
             <p>
@@ -275,7 +272,7 @@
               <a href="#!" class="text-reset">Laravel</a>
             </p>
           </div>
-          <!-- Grid column -->
+           -->
   
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -284,16 +281,16 @@
               Useful links
             </h6>
             <p>
-              <a href="#!" class="text-reset">Pricing</a>
+              <a href="#!" class="text-reset nounderline">About Us</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="#!" class="text-reset nounderline">Careers</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset nounderline">Contact Us</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset nounderline">Help</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -308,8 +305,8 @@
   
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="#">FunnyPeople.com</a>
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">teamundefined.com</a>
     </div>
     <!-- Copyright -->
   </footer>

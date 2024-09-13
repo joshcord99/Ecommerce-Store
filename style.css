@@ -1,20 +1,25 @@
-.btn1 {
-    background-color: green !important; /* Important to override default styles */
-    border-color: green !important;     /* Optional: change border color */
-    border-radius: 6px;
-}
-  .btn2 {
+.nounderline {
+    text-decoration: none;
+  }
+  
+  .nounderline:hover {
+    text-decoration: underline; /* Optional: to add underline on hover */
+  }
+  .btn1 {
     background-color: green !important; /* Important to override default styles */
     border-color: green !important;     /* Optional: change border color */
     border-radius: 6px;
 }
 
+.btn2 {
+    background-color: green !important; /* Important to override default styles */
+    border-color: green !important;     /* Optional: change border color */
+    border-radius: 6px;
+    color: azure;
+}
 .btn3 {
     background-color: grey !important; /* Important to override default styles */
     border-color: grey !important;     /* Optional: change border color */
     border-radius: 6px;
-
-}
-.boxes{
-    display: flex;
+color: azure;
 }
