@@ -34,18 +34,23 @@ const totalEl = document.getElementById('salesData');
 
 
 const saveChangesBtn = document.querySelector('#editSave');
+let modal = document.querySelector('.modal');
 
-saveChangesBtn.addEventListener('click', function(event) {
+modal.addEventListener('click', function(event) {
     event.preventDefault();
 
-    const editTitleDescription = document.querySelector('#editTitle').value;
+    const editTitleDescription = document.querySelector('#editTitle');
 
-    document.querySelector('#cardTitle').textContent = editTitleDescription;
+    const editItemDescription = document.querySelector('#editTextarea');
 
-    const editItemDescription = document.querySelector('#editTextarea').value;
-
-    document.querySelector('#cardText').textContent = editItemDescription;
+    if(!editTitleDescription.value || !editItemDescription.value) {
+        document.querySelector('#ModalLabel').textContent = 'Please Fill All Fields.';
+        return;
+    } 
     
+    document.querySelector('#cardTitle').textContent = editTitleDescription.value;
+
+    document.querySelector('#cardText').textContent = editItemDescription.value;
 
 })
 
