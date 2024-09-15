@@ -31,30 +31,7 @@ const totalEl = document.getElementById('salesData');
 //     }
 // }
 
-// function editText() {
-//     const editTextAreaEl = document.getElementById('editTextArea');
-//     const editBtn = document.getElementById('editSave');
-//     const cardTextEl = document.getElementById('cardText');
 
-//     editTextAreaEl.addEventListener('click', function(){
-//         editTextAreaEl.value = localStorage.setItem('textArea' , JSON.stringify(editTextAreaEl));
-//     }
-// )
-
-//     for(let i = 0; 0 < editTextAreaEl.length; i++) {
-
-//         const newTextEl = document.createElement('p');
-//         newTextEl = JSON.parse(localStorage.getItem('textArea'));
-//         cardTextEl.appendChild(newTextEl);
-
-//         if(newTextEl.value > 0 && editBtn.addEventListener('click')) {
-//             cardTextEl.textContent = newTextEl.value;
-//         }
-//         console.log(newTextEl);
-//     }
-// }
-
-// editText();
 
 const saveChangesBtn = document.querySelector('#editSave');
 
@@ -63,5 +40,6 @@ saveChangesBtn.addEventListener('click', function(event) {
 
     const editItemDescription = document.querySelector('#editTextarea').value;
 
-    console.log(editItemDescription);
+    document.querySelector('#cardText').textContent = editItemDescription;
+
 })
