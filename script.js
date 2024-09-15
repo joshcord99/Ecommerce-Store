@@ -22,6 +22,11 @@ for (const Elmt of cartEl){
 }
 // toggle between Login and Registration
 
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })
+
 const signupbtn = document.querySelector('#signup');
 const loginbtn = document.querySelector('#login');
 signupbtn.addEventListener('click',function(){
