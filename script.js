@@ -107,4 +107,15 @@ form.addEventListener('submit', function(event){
     console.log('Stored Name:', storedName);
     console.log('Stored Email:', storedEmail);
     console.log('Stored Password:', storedPassword);
+
+    // if(!storedName || !storedEmail || !storedPassword) {
+    //     storedName = '';
+    //     storedEmail = '';
+    //     storedPassword = '';
+    //     return;
+    // } else if(storedUserType.value = 'admin'){
+    //     redirectPage('./admin.html');
+    // } else {
+    //     redirectPage('./index.html');
+    // }
 });
