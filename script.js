@@ -35,18 +35,28 @@ loginbtn.addEventListener('click',function(){
 
 const users = JSON.parse(localStorage.getItem('newUsers')) || []
 
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('exampleInputEmail1');
-const passwordInput = document.getElementById('exampleInputPassword1');
-const isAdminInput = document.getElementById('isAdmin');
+const nameInput = document.getElementById('name').value;
+const emailInput = document.getElementById('exampleInputEmail1').value;
+const passwordInput = document.getElementById('exampleInputPassword1').value;
+//const userClientInput = document.getElementById('userClient').value;
+//const userAdminInput = document.getElementById('userAdmin').value;
 //saves in local storage
 //localstorage.setItem('blogPost', JSON.stringify(blogPost));
 
+function getOption() {
+    selectElement =
+        document.querySelector('#userType');
+    output = selectElement.value;
+    document.querySelector('.output').textContent = output;
+}
+
 const newUsers = {
-    name: nameInput.value,
-    email: emailInput.value,
-    password: passwordInput.value,
-    isAdmin: isAdminInput,
+    name: nameInput,
+    email: emailInput,
+    password: passwordInput,
+    usertype: getOption(),
+    //client: userClientInput,
+    //admin: userAdminInput,
 }
 users.push(newUsers)
 localStorage.setItem('newUsers', JSON.stringify(users));
@@ -60,11 +70,11 @@ const redirectPage = function (url) {
   location.assign(url);
 };
 
-if(!isAdminInput) {
-    redirectPage('./index.html');
-} else {
-    redirectPage('./admin.html')
-}
+//if(!isAdminInput) {
+  //  redirectPage('./index.html');
+//} else {
+  //  redirectPage('./admin.html')
+//}
 
 //localstorage.setItem(`emailIexampleInputEmail1`, email);
 //localstorage.getItem(`exampleInputPassword1`, password);
