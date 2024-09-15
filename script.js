@@ -35,33 +35,33 @@ loginbtn.addEventListener('click',function(){
 
 const users = JSON.parse(localStorage.getItem('newUsers')) || []
 
-const nameInput = document.getElementById('name').value;
-const emailInput = document.getElementById('exampleInputEmail1').value;
-const passwordInput = document.getElementById('exampleInputPassword1').value;
-//const userClientInput = document.getElementById('userClient').value;
-//const userAdminInput = document.getElementById('userAdmin').value;
+// const nameInput = document.getElementById('name').value;
+// const emailInput = document.getElementById('exampleInputEmail1').value;
+// const passwordInput = document.getElementById('exampleInputPassword1').value;
+// //const userClientInput = document.getElementById('userClient').value;
+// //const userAdminInput = document.getElementById('userAdmin').value;
 //saves in local storage
 //localstorage.setItem('blogPost', JSON.stringify(blogPost));
 
-function getOption() {
-    selectElement =
-        document.querySelector('#userType');
-    output = selectElement.value;
-    document.querySelector('.output').textContent = output;
-}
+//function getOption() {
+  //  selectElement =
+    //    document.querySelector('#userType');
+    //output = selectElement.value;
+   // document.querySelector('.output').textContent = output;
+//}
 
-const newUsers = {
-    name: nameInput,
-    email: emailInput,
-    password: passwordInput,
-    usertype: getOption(),
+// const newUsers = {
+//     name: nameInput,
+//     email: emailInput,
+//     password: passwordInput,
+//     usertype: getOption(),
     //client: userClientInput,
     //admin: userAdminInput,
-}
-users.push(newUsers)
-localStorage.setItem('newUsers', JSON.stringify(users));
+// }
+// users.push(newUsers)
+// localStorage.setItem('newUsers', JSON.stringify(users));
 
-console.log(users);
+// console.log(users);
 
 let redirectURL = '';
 
