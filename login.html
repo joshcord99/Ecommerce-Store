@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +12,13 @@
         
         <div class="row justify-content-center">
             <div class="col-4">
-                <form>
+                <form id="">
                     <h1>Login</h1>
                     <div class="form-group">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                            </p>
+                        </div>
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -34,20 +37,31 @@
         </div>
         <div class="row justify-content-center ">
             <div class="col-6">
-                <form class='invisible'>
+                <form id="myForm" class='invisible'>
                     <h1>Registration</h1>
+                    <div class="field">
+                        <p class="control has-icons-left">Please select account type.
+                                <select id="userType">
+                                    <option id="userClient" value="client">Client</option>
+                                    <option id="userAdmin" value="admin">Admin</option>
+                                </select>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-globe"></i>
+                            </span>
+                        </p>
+                    </div>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmailOne" aria-describedby="emailHelp" placeholder="Enter email">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPasswordOne" placeholder="Password">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -62,97 +76,3 @@
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="script.js"></script>
-=======
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecommerce Store</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .field {
-            margin-bottom: 1rem;
-        }
-        .mt-5 {
-            margin-top: 3rem;
-        }
-        .mb-3 {
-            margin-bottom: 1rem;
-        }
-        .text-body-secondary {
-            color: #6c757d;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Ecommerce Store</h1>
-        <form>
-            <div class="field">
-                <p class="control has-icons-left">
-                    <span class="select">
-                        <select>
-                            <option selected>Client</option>
-                            <option>Admin</option>
-                        </select>
-                    </span>
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-globe"></i>
-                    </span>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="Email">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                    <span class="icon is-small is-right">
-                        <i class="fas fa-check"></i>
-                    </span>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control has-icons-left">
-                    <input class="input" type="password" placeholder="Password">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control">
-                    <button class="button is-success">
-                        Login
-                    </button>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">New around here? Sign up</a>
-                    <a class="dropdown-item" href="#">Forgot password?</a>
-                  </div>
-                </p>
-            </div>
-        </form>
-    </div>
->>>>>>> 3367cde0ef01220ba81f4b6d02ed3b2ddb5ba596
-</body>
-</html>
