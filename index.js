@@ -46,7 +46,7 @@ rowDiv.appendChild(colDivel);
 
 // selecting elements with class card to add event listener and add/save selected items in the cart
 const cartEl = document.querySelectorAll('.card');
-
+const cartBtn = document.querySelector('#cart');//cart button selector with id cart
 for (const Elmt of cartEl){
     
     Elmt.addEventListener('click',function(e){
@@ -55,13 +55,14 @@ for (const Elmt of cartEl){
             const index  = element.getAttribute('data-index');
             cartItms.titles.push(saleitems.titles[index]);
             cartItms.prices.push(saleitems.prices[index]);
+            cartBtn.children[0].innerHTML =  cartItms.titles.length;//show cart item counts
         }
         
         console.log(cartItms);
     })
 }
 // show cart items in the modal by selecting cart button with id cart and append items in the modal to render
-const cartBtn = document.querySelector('#cart');
+
 cartBtn.addEventListener('click',function(){
 
     const modalbody = document.querySelector('.modal-body');
@@ -81,6 +82,7 @@ cartBtn.addEventListener('click',function(){
                cartItms.titles.splice(index,1);
                cartItms.prices.splice(index,1);
                aEl.parentElement.remove();
+               cartBtn.children[0].innerHTML =  cartItms.titles.length;
             });
             liEl.textContent = cartItms.titles[i] +' for $' + cartItms.prices[i].toFixed(2);
             liEl.append(aEl);
