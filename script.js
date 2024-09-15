@@ -63,12 +63,12 @@ const users = JSON.parse(localStorage.getItem('newUsers')) || []
 
 // console.log(users);
 
-let redirectURL = '';
+// let redirectURL = '';
 
-const redirectPage = function (url) {
-  redirectURL = url;
-  location.assign(url);
-};
+// const redirectPage = function (url) {
+//   redirectURL = url;
+//   location.assign(url);
+// };
 
 //if(!isAdminInput) {
   //  redirectPage('./index.html');
@@ -78,3 +78,17 @@ const redirectPage = function (url) {
 
 //localstorage.setItem(`emailIexampleInputEmail1`, email);
 //localstorage.getItem(`exampleInputPassword1`, password);
+const form = document.querySelector('#myForm');
+
+form.addEventListener('submit', function(event){
+    event.preventDefault()
+    const select = document.querySelector('#userType').value;
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#exampleInputEmailOne').value;
+    const password = document.querySelector('#exampleInputPasswordOne').value;
+    console.log(select);
+    console.log(name);
+    console.log(email);
+    console.log(password);
+
+})
