@@ -9,11 +9,12 @@ const cartItms = {
     titles:[],
     prices:[]
 };
-const rowDiv = document.querySelector('.row');
-const cartBtn = document.querySelector('#cart');
+const rowDiv = document.querySelector('.row');// div element with class row selector
+const cartBtn = document.querySelector('#cart');//cart button selector
 
 // for loop to render sales items on the page
 renderpagesaleItems(saleitems); // call function to render page
+
 function renderpagesaleItems(saleitems){    // function to renderpage sale items
 
     for (let i=0;i<saleitems.titles.length;i++){
@@ -52,7 +53,7 @@ function renderpagesaleItems(saleitems){    // function to renderpage sale items
 }
 
 // selecting elements with class card to add event listener and add/save selected items in the cart
-cardeventHandler(saleitems);
+cardeventHandler(saleitems);// calling function for adding and handling events on each card rendered
 function cardeventHandler(saleitems){
 
     const cartEl = document.querySelectorAll('.card');
@@ -105,7 +106,7 @@ cartBtn.addEventListener('click',function(){
     }
 });
 
-
+// function to search specific item in the saved array
 const searchValueFunction = (search_value, array) => {
     const new_array = {titles:[],prices:[]};
     for (let i = 0; i < array.titles.length; i++) {
@@ -136,6 +137,10 @@ searchbtn.addEventListener('click',function(){
             rowDiv.innerHTML = 'NO Matches';
         }
 
+    }else{
+        rowDiv.innerHTML = '';
+        renderpagesaleItems(saleitems);
+        cardeventHandler(saleitems);
     }
     
         
