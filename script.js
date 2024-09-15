@@ -81,14 +81,30 @@ const users = JSON.parse(localStorage.getItem('newUsers')) || []
 const form = document.querySelector('#myForm');
 
 form.addEventListener('submit', function(event){
-    event.preventDefault()
+    event.preventDefault();
+
     const select = document.querySelector('#userType').value;
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#exampleInputEmailOne').value;
     const password = document.querySelector('#exampleInputPasswordOne').value;
-    console.log(select);
-    console.log(name);
-    console.log(email);
-    console.log(password);
 
-})
+    localStorage.setItem('userType', select);
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+
+    console.log('User Type:', select);
+    console.log('User Name:', name);
+    console.log('User Email:', email);
+    console.log('User Password:', password);
+
+    const storedUserType = localStorage.getItem('userType');
+    const storedName = localStorage.getItem('name');
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+
+    console.log('Stored User Type:', storedUserType);
+    console.log('Stored Name:', storedName);
+    console.log('Stored Email:', storedEmail);
+    console.log('Stored Password:', storedPassword);
+});
