@@ -38,8 +38,14 @@ const saveChangesBtn = document.querySelector('#editSave');
 saveChangesBtn.addEventListener('click', function(event) {
     event.preventDefault();
 
+    const editTitleDescription = document.querySelector('#editTitle').value;
+
+    document.querySelector('#cardTitle').textContent = editTitleDescription;
+
     const editItemDescription = document.querySelector('#editTextarea').value;
 
     document.querySelector('#cardText').textContent = editItemDescription;
+    
 
 })
+
