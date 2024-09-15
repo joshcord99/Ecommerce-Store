@@ -60,5 +60,8 @@ const saveChangesBtn = document.querySelector('#editSave');
 
 saveChangesBtn.addEventListener('click', function(event) {
     event.preventDefault();
-    console.log('hello');
+
+    const editItemDescription = document.querySelector('#editTextarea').value;
+
+    console.log(editItemDescription);
 })
