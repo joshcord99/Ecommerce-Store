@@ -1,11 +1,4 @@
 
-// toggle between Login and Registration
-
-
-// myModal.addEventListener('shown.bs.modal', () => {
-//   myInput.focus()
-// })
-// <div class="col">
 // variables for sales items and cart items
 const saleitems = {
     titles:['bag','shoes','short','shirt','watch','belt','socks'],
