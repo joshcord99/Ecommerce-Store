@@ -123,7 +123,7 @@ logInForm.addEventListener('submit', function (event){
     let email = document.querySelector('#exampleInputEmailOne').value;
     let password = document.querySelector('#exampleInputPasswordOne').value;
 
-    let storedUserType = localStorage.getItem('userType').value;
+    let storedUserType = localStorage.getItem('userType');
     let storedName = localStorage.getItem('name');
     let storedEmail = localStorage.getItem('email');
     let storedPassword = localStorage.getItem('password');
@@ -133,10 +133,10 @@ logInForm.addEventListener('submit', function (event){
         storedEmail = '';
         storedPassword = '';
         return;
-    } else if(storedUserType.value = true){
-        redirectPage('./admin.html');
-    } else if(!storedUserType.value) {
-        redirectPage('./index.html');
+    } else if(storedUserType === 'true') {
+        location.assign('./admin.html');
+    } else if(storedUserType === 'false') {
+        location.assign('./index.html');
     }else {
         alert('Unknown user type');
     }
