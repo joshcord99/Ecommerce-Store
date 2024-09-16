@@ -3,23 +3,45 @@
   }
   
   .nounderline:hover {
-    text-decoration: underline; /* Optional: to add underline on hover */
+    text-decoration: underline; 
   }
   .btn1 {
-    background-color: green !important; /* Important to override default styles */
-    border-color: green !important;     /* Optional: change border color */
+    background-color: green !important; 
+    border-color: green !important;     
     border-radius: 6px;
 }
 
 .btn2 {
-    background-color: green !important; /* Important to override default styles */
-    border-color: green !important;     /* Optional: change border color */
+    background-color: green !important; 
+    border-color: green !important;     
     border-radius: 6px;
     color: azure;
 }
 .btn3 {
-    background-color: grey !important; /* Important to override default styles */
-    border-color: grey !important;     /* Optional: change border color */
+    background-color: grey !important; 
+    border-color: grey !important;    
     border-radius: 6px;
 color: azure;
+}
+
+.btn5
+.left-align {
+  position: absolute;
+  left: 0;
+  top: 20px; 
+}
+
+
+a.button-link {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: Arial, sans-serif;
+}
+
+a.button-link:hover {
+  background-color: #ecedef;
 }
