@@ -117,27 +117,27 @@ const searchValueFunction = (search_value, array) => {
     }
     return new_array;
 };
-
+// event listener on Id searchbtn 
 const searchbtn = document.querySelector('#searchbtn');
-searchbtn.addEventListener('click',function(){
-    
+searchbtn.addEventListener('click',function(e){
+    e.preventDefault();
     const searchValue = document.querySelector('[type=search]');
 
-    
+//  check if input type [search] is not empty
     if(searchValue.value){
         const searchsaleitems = searchValueFunction(searchValue.value, saleitems);
         rowDiv.innerHTML = '';
         console.log(searchsaleitems.titles.length);
-        if(searchsaleitems.titles.length){
+        if(searchsaleitems.titles.length){//check if array has items matched with search value
             renderpagesaleItems(searchsaleitems);
             cardeventHandler(searchsaleitems);
 
-        }else{
+        }else{//if no match found
 
             rowDiv.innerHTML = 'NO Matches';
         }
 
-    }else{
+    }else{//when input type [search] is empty
         rowDiv.innerHTML = '';
         renderpagesaleItems(saleitems);
         cardeventHandler(saleitems);
@@ -146,7 +146,3 @@ searchbtn.addEventListener('click',function(){
         
 });
 
-// function saveData(cartItms){
-//     localStorage.setItem('CartItems')
-
-// }
