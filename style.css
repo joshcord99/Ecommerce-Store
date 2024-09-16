@@ -24,22 +24,6 @@
 color: azure;
 }
 
-.btn4 {
-  background-color: green !important; 
-  border-color: green !important;     
-  border-radius: 6px;                 
-  color: azure;                       
-  cursor: pointer;                    
-  outline: none !important;          
-  box-shadow: none !important;        
-
-
-.btn4:focus, 
-.btn4:active {
-  outline: none !important;        
-  box-shadow: none !important;        
-}
-
 .btn5
 .left-align {
   position: absolute;

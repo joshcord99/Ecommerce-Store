@@ -62,7 +62,7 @@ function cardeventHandler(saleitems){
         
         Elmt.addEventListener('click',function(e){
             const element = e.target;
-            if(element.matches('a')){
+            if(element.matches('a[data-index]')){
                 const index  = element.getAttribute('data-index');
                 cartItms.titles.push(saleitems.titles[index]);
                 cartItms.prices.push(saleitems.prices[index]);
@@ -150,3 +150,4 @@ searchbtn.addEventListener('click',function(){
 //     localStorage.setItem('CartItems')
 
 // }
+
