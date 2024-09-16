@@ -1,7 +1,7 @@
 // TODO: select query items from page to display down below
-const soldEl = document.getElementById('soldData');
-const favEl = document.getElementById('favData');
-const totalEl = document.getElementById('salesData');
+// const soldEl = document.getElementById('soldData');
+// const favEl = document.getElementById('favData');
+// const totalEl = document.getElementById('salesData');
 
 // // TODO: grab the sold data of items sold
 // function soldDisplay() {
@@ -30,27 +30,53 @@ const totalEl = document.getElementById('salesData');
 //         totalEl.textContent = sum;
 //     }
 // }
+const addNewBtn = document.querySelector('#addNewBtn');
+const cardDivEl = document.querySelector('.card');
+    addNewBtn.addEventListener('click', function() {
+        cardDivEl.style.display = 'block';
+    })
 
+const newItems = [];
 
 
 const saveChangesBtn = document.querySelector('#editSave');
 let modal = document.querySelector('.modal');
 
-modal.addEventListener('click', function(event) {
+saveChangesBtn.addEventListener('click', function(event) {
     event.preventDefault();
 
-    const editTitleDescription = document.querySelector('#editTitle');
-
+    const editImage = document.querySelector('#editImage');
+    const editTitle = document.querySelector('#editTitle');
     const editItemDescription = document.querySelector('#editTextarea');
+    const editPrice = document.querySelector('#editPrice');
 
-    if(!editTitleDescription.value || !editItemDescription.value) {
+    if(!editTitle.value || !editItemDescription.value) {
         document.querySelector('#ModalLabel').textContent = 'Please Fill All Fields.';
         return;
     } 
-    
-    document.querySelector('#cardTitle').textContent = editTitleDescription.value;
 
+    const newItemObj = {
+        imgUrl: '',
+        title: '',
+        desc: '',
+        price: '',
+    }
+
+    document.querySelector('#image').setAttribute('src', editImage.value);
+    document.querySelector('#cardTitle').textContent = editTitle.value;
     document.querySelector('#cardText').textContent = editItemDescription.value;
+    document.querySelector('#price').textContent = editPrice.value;
 
+    newItemObj.imgUrl = editImage.value;
+    newItemObj.title = editTitle.value;
+    newItemObj.desc = editItemDescription.value;
+    newItemObj.price = editPrice.value;
+
+    newItems.push(newItemObj);
+    console.log(newItems);
+    saveData(newItems);
 })
 
+function saveData(data) {
+    localStorage.setItem('newSaleItems', JSON.stringify(data));
+}
