@@ -3,41 +3,61 @@
   }
   
   .nounderline:hover {
-    text-decoration: underline; /* Optional: to add underline on hover */
+    text-decoration: underline; 
   }
   .btn1 {
-    background-color: green !important; /* Important to override default styles */
-    border-color: green !important;     /* Optional: change border color */
+    background-color: green !important; 
+    border-color: green !important;     
     border-radius: 6px;
 }
 
 .btn2 {
-    background-color: green !important; /* Important to override default styles */
-    border-color: green !important;     /* Optional: change border color */
+    background-color: green !important; 
+    border-color: green !important;     
     border-radius: 6px;
     color: azure;
 }
 .btn3 {
-    background-color: grey !important; /* Important to override default styles */
-    border-color: grey !important;     /* Optional: change border color */
+    background-color: grey !important; 
+    border-color: grey !important;    
     border-radius: 6px;
 color: azure;
 }
 
 .btn4 {
-  background-color: green !important; /* Background color */
-  border-color: green !important;     /* Border color */
-  border-radius: 6px;                 /* Rounded corners */
-  color: azure;                       /* Text color */
-  cursor: pointer;                    /* Pointer on hover */
-  outline: none !important;           /* Remove outline */
-  box-shadow: none !important;        /* Remove shadow */
-}
+  background-color: green !important; 
+  border-color: green !important;     
+  border-radius: 6px;                 
+  color: azure;                       
+  cursor: pointer;                    
+  outline: none !important;          
+  box-shadow: none !important;        
 
-/* Ensure focus and active states have no outline or shadow */
+
 .btn4:focus, 
 .btn4:active {
-  outline: none !important;           /* Remove focus outline */
-  box-shadow: none !important;        /* Remove focus shadow */
+  outline: none !important;        
+  box-shadow: none !important;        
 }
 
+.btn5
+.left-align {
+  position: absolute;
+  left: 0;
+  top: 20px; 
+}
+
+
+a.button-link {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: Arial, sans-serif;
+}
+
+a.button-link:hover {
+  background-color: #ecedef;
+}
