@@ -43,10 +43,14 @@ modal.addEventListener('click', function(event) {
 
     const editItemDescription = document.querySelector('#editTextarea');
 
+    const editImage = document.querySelector('#editImage');
+
     if(!editTitleDescription.value || !editItemDescription.value) {
         document.querySelector('#ModalLabel').textContent = 'Please Fill All Fields.';
         return;
     } 
+
+    document.querySelector('#image').setAttribute('src', editImage.value);
     
     document.querySelector('#cardTitle').textContent = editTitleDescription.value;
 
