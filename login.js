@@ -9,60 +9,60 @@ loginbtn.addEventListener('click',function(){
     signupbtn.parentElement.classList.toggle('invisible');
 })
 
-const users = JSON.parse(localStorage.getItem('newUsers')) || []
+// const users = JSON.parse(localStorage.getItem('newUsers')) || []
 
-// const nameInput = document.getElementById('name').value;
-// const emailInput = document.getElementById('exampleInputEmail1').value;
-// const passwordInput = document.getElementById('exampleInputPassword1').value;
-// //const userClientInput = document.getElementById('userClient').value;
-// //const userAdminInput = document.getElementById('userAdmin').value;
-//saves in local storage
-//localstorage.setItem('blogPost', JSON.stringify(blogPost));
+// // const nameInput = document.getElementById('name').value;
+// // const emailInput = document.getElementById('exampleInputEmail1').value;
+// // const passwordInput = document.getElementById('exampleInputPassword1').value;
+// // //const userClientInput = document.getElementById('userClient').value;
+// // //const userAdminInput = document.getElementById('userAdmin').value;
+// //saves in local storage
+// //localstorage.setItem('blogPost', JSON.stringify(blogPost));
 
-//function getOption() {
-  //  selectElement =
-    //    document.querySelector('#userType');
-    //output = selectElement.value;
-   // document.querySelector('.output').textContent = output;
-//}
+// //function getOption() {
+//   //  selectElement =
+//     //    document.querySelector('#userType');
+//     //output = selectElement.value;
+//    // document.querySelector('.output').textContent = output;
+// //}
 
-// const newUsers = {
-//     name: nameInput,
-//     email: emailInput,
-//     password: passwordInput,
-//     usertype: getOption(),
-    //client: userClientInput,
-    //admin: userAdminInput,
-// }
-// users.push(newUsers)
-// localStorage.setItem('newUsers', JSON.stringify(users));
+// // const newUsers = {
+// //     name: nameInput,
+// //     email: emailInput,
+// //     password: passwordInput,
+// //     usertype: getOption(),
+//     //client: userClientInput,
+//     //admin: userAdminInput,
+// // }
+// // users.push(newUsers)
+// // localStorage.setItem('newUsers', JSON.stringify(users));
 
-// console.log(users);
+// // console.log(users);
 
-// let redirectURL = '';
+// // let redirectURL = '';
 
 // const redirectPage = function (url) {
 //   redirectURL = url;
 //   location.assign(url);
 // };
 
-//if(!isAdminInput) {
-  //  redirectPage('./index.html');
-//} else {
-  //  redirectPage('./admin.html')
-//}
+// //if(!isAdminInput) {
+//   //  redirectPage('./index.html');
+// //} else {
+//   //  redirectPage('./admin.html')
+// //}
 
-//localstorage.setItem(`emailIexampleInputEmail1`, email);
-//localstorage.getItem(`exampleInputPassword1`, password);
+// //localstorage.setItem(`emailIexampleInputEmail1`, email);
+// //localstorage.getItem(`exampleInputPassword1`, password);
 const form = document.querySelector('#myForm');
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
 
-    const select = document.querySelector('#userType').value;
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#exampleInputEmailOne').value;
-    const password = document.querySelector('#exampleInputPasswordOne').value;
+    let select = document.querySelector('#userType').value;
+    let name = document.querySelector('#name').value;
+    let email = document.querySelector('#exampleInputEmailOne').value;
+    let password = document.querySelector('#exampleInputPasswordOne').value;
 
     localStorage.setItem('userType', select);
     localStorage.setItem('name', name);
@@ -74,13 +74,41 @@ form.addEventListener('submit', function(event){
     console.log('User Email:', email);
     console.log('User Password:', password);
 
-    const storedUserType = localStorage.getItem('userType');
-    const storedName = localStorage.getItem('name');
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
+    let storedUserType = localStorage.getItem('userType');
+    let storedName = localStorage.getItem('name');
+    let storedEmail = localStorage.getItem('email');
+    let storedPassword = localStorage.getItem('password');
 
     console.log('Stored User Type:', storedUserType);
     console.log('Stored Name:', storedName);
     console.log('Stored Email:', storedEmail);
     console.log('Stored Password:', storedPassword);
+});
+
+const logInForm = document.querySelector('#logInForm');
+
+logInForm.addEventListener('submit', function (event){
+    event.preventDefault();
+    let select = document.querySelector('#userType').value;
+    let name = document.querySelector('#name').value;
+    let email = document.querySelector('#exampleInputEmailOne').value;
+    let password = document.querySelector('#exampleInputPasswordOne').value;
+
+    let storedUserType = localStorage.getItem('userType');
+    let storedName = localStorage.getItem('name');
+    let storedEmail = localStorage.getItem('email');
+    let storedPassword = localStorage.getItem('password');
+    
+    if(!storedEmail || !storedPassword) {
+        storedName = '';
+        storedEmail = '';
+        storedPassword = '';
+        return;
+    } else if(storedUserType === 'true') {
+        location.assign('./admin.html');
+    } else if(storedUserType === 'false') {
+        location.assign('./index.html');
+    }else {
+        alert('Unknown user type');
+    }
 });
