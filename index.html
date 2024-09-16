@@ -32,14 +32,15 @@
             </ul>
           </div>
 
-          <button class="btn btn-primary btn-sm ms-2">Search</button>
+          <button class="btn btn-primary btn-sm ms-2" id="searchbtn">Search</button>
         </form>
       </div>
     
           <!-- Cart Button with ms-auto to push it to the right -->
           <div class="d-flex ms-auto">
-            <button class='btn1 btn btn-secondary' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              🛒 Cart
+            
+            <button class='btn1 btn btn-secondary' type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="cart">
+              🛒 Cart <span class="badge text-bg-secondary"></span>
             </button>
           </div>
     
@@ -80,107 +81,10 @@
     
       <div class="container text-center mt-3 mb-3" >
         <div class="col">
-        <div class="row">
-            <!-- <div class="col-1 p-3">
-            <h3>Hello Sally</h3>
-            <div class="col">
-              <p>Accounts</p>
-              <p>Orders</p>
-              <p>Settings</p>
-            </div>
-          </div> -->
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
+          <div class="row">
+            
+          </div> 
         </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bbg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-        <!-- </div> closer for div line 42 -->
-          <!-- <div class="row"r> -->
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mt-2 mb-2" style="width: 18rem;">
-                <img src="https://img.freepik.com/free-vector/realistic-horizontal-sale-banner-template-with-photo_23-2149017940.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Add To Cart</a>
-                  <a href="#" class="btn bg-opacity-10">❤️</a>
-                </div>
-            </div>
-          </div>
-        </div> <!--line 84-->
-      </div>
       </div> 
       <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -191,13 +95,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <ol>
-                  <li>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error molestiae natus assumenda atque officia praesentium iure, omnis voluptates doloribus distinctio repudiandae nobis necessitatibus qui. Beatae doloribus fuga obcaecati dolore perferendis.
-                  </li>
-                  <li>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolor commodi nostrum, incidunt tempore repellendus esse illo eos blanditiis ratione, totam facere quas rerum voluptate ducimus amet inventore minus obcaecati.
-                </ol>
+  
                 </div>
                 <div class="modal-footer">
                 <button class='btn3' type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
@@ -312,6 +210,6 @@
   </footer>
   <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
