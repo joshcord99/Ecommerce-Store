@@ -123,7 +123,7 @@ searchbtn.addEventListener('click',function(e){
     e.preventDefault();
     const searchValue = document.querySelector('[type=search]');
 
-//  check weather input type [search] is not empty
+//  check if input type [search] is not empty
     if(searchValue.value){
         const searchsaleitems = searchValueFunction(searchValue.value, saleitems);
         rowDiv.innerHTML = '';
