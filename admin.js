@@ -39,6 +39,8 @@ let modal = document.querySelector('.modal');
 modal.addEventListener('click', function(event) {
     event.preventDefault();
 
+    const editImage = document.querySelector('#editImage');
+
     const editTitleDescription = document.querySelector('#editTitle');
 
     const editItemDescription = document.querySelector('#editTextarea');
@@ -47,6 +49,8 @@ modal.addEventListener('click', function(event) {
         document.querySelector('#ModalLabel').textContent = 'Please Fill All Fields.';
         return;
     } 
+
+    document.querySelector('#image').setAttribute('src', editImage.value);
     
     document.querySelector('#cardTitle').textContent = editTitleDescription.value;
 
