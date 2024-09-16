@@ -23,3 +23,21 @@
     border-radius: 6px;
 color: azure;
 }
+
+.btn4 {
+  background-color: green !important; /* Background color */
+  border-color: green !important;     /* Border color */
+  border-radius: 6px;                 /* Rounded corners */
+  color: azure;                       /* Text color */
+  cursor: pointer;                    /* Pointer on hover */
+  outline: none !important;           /* Remove outline */
+  box-shadow: none !important;        /* Remove shadow */
+}
+
+/* Ensure focus and active states have no outline or shadow */
+.btn4:focus, 
+.btn4:active {
+  outline: none !important;           /* Remove focus outline */
+  box-shadow: none !important;        /* Remove focus shadow */
+}
+
